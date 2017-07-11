@@ -1,0 +1,1 @@
+INSERT INTO user_table (email, password) VALUES ($1, $2)
