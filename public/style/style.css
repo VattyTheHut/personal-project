@@ -160,4 +160,23 @@ li a:hover:not(.active) {
 }
 
 
+.profile-background{
+    background-color: brown;
+    padding: 10%;
+}
+
+.big-margin-pinch{
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.down-margin{
+  margin-top: 5%;
+}
+
+.thin-grey-box{
+  border-style: solid;
+  border-width: thin;
+  border-color: gray;
+}
 

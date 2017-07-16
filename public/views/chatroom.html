@@ -1,4 +1,5 @@
-<main-nav></main-nav>
+<div ng-controller="chatCtrl">
+  <main-nav></main-nav>
 
   <div class="chat-container">
 
@@ -13,9 +14,11 @@
             <div class="message-text ten columns">{{message.text}}</div>
           </div>
       </div>
+
       <div class="row message-input">        
         <div class="twelve columns">
-            <button>Send</button><input class="" type="" placeholder="" id="">
+              <button ng-model="appendMsg()">Send</button>
+              <input  ng-model="appendMsg()" type="text" placeholder="" id="">
         </div>
       </div>
 
@@ -32,4 +35,5 @@
     </div>
   </div>
 
+  </div>
   </div>

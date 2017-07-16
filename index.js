@@ -1,11 +1,14 @@
+require('dotenv').config()
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 var session = require('express-session')
 const massive = require('massive');
 var messages = require('./backend/text-message.js')
+const http = require('http').Server(express);
+var io = require('socket.io')(http);
 
-var port = 4000
+
 
 const app = express()
 
@@ -46,10 +49,25 @@ app.post('/postNewUser', function(req, res, next){
     res.status(200).json(response)})
   .catch(err => res.status(404).json(err))
 
-
 });
 
+var messages = []
 
-app.listen(port, () => {
-  console.log('it works!')
+io.on('connection', (socket) =>{
+
+  io.to(socket.id).emit('message history', messages)
+  socket.on('chat message', (msg) =>{
+      console.log(msg)
+      messages.push(msg)
+    io.emit('chat message', msg);
+    
+  });
+});
+
+app.get('/', function(req, res){
+  res.sendFile(__dirname + '/index.html');
+});
+
+app.listen(process.env.PORT, () => {
+  console.log('listening on *:' + process.env.PORT);
 })
