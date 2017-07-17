@@ -126,9 +126,6 @@ li a:hover:not(.active) {
   margin-right: 10%;
 }
 
-/*.gray-back{
-  background-color: #FAFAFA;
-}*/
 
 
 /*------------*/
@@ -251,3 +248,21 @@ li a:hover:not(.active) {
   height: 70vh;
   background-color: #373737;
 }
+
+/*#message-sender{
+
+}
+
+#message-texter{
+
+}*/
+
+
+.gray-back{
+  background-color: #FAFAFA;
+  padding: 4%;
+  font-size: 22px;
+
+}
+
+

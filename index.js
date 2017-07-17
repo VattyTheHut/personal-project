@@ -64,11 +64,11 @@ app.post('/postNewUser', (req, res, next) => {
 
 io.on('connection', (socket) =>{
 
-  //io.to(socket.id).emit('message history', messages)
+  io.to(socket.id).emit('message history', messages)
   socket.on('chat message', (msg) =>{
       console.log(msg)
       messages.push(msg)
-    io.emit('chat message', msg);
+     io.emit('chat message', msg);
     
   });
 });

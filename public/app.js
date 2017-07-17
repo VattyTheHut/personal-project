@@ -53,9 +53,13 @@ app.config(function($stateProvider, $urlRouterProvider) {
     templateUrl: 'directive/mainNav.html'
   };
 }).directive('endFooter', function() {
-    console.log("endfooter")
   return {
     templateUrl: './directive/end-footer.html'
+  };
+  
+}).directive('profileNav', function() {
+  return {
+    templateUrl: './directive/profileNav.html'
   };
   
 });
