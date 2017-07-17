@@ -1,7 +1,7 @@
 
 angular.module('app')
 
-.controller('mainCtrl', function($scope, mainServ) {
+.controller('mainCtrl', ($scope, mainServ) =>{
 
 const quotes = [
     {
@@ -143,19 +143,19 @@ const quotes = [
 ]
 
 
-$scope.quoteFade = function(){
+$scope.quoteFade = () =>{
   console.log('quoter now')
 
-//   function quoter(index){
-//     console.log(quotes[index].quote)
-//   }
+  function quoter(index){
+    console.log(quotes[index].quote)
+  }
 
-//   while(true){
+  while(true){
   
-//     for(var i = 0; i < quotes.length; i++){
-//       setTimeout(quoter(i), 10000);
-//     }
-//   }
+    for(var i = 0; i < quotes.length; i++){
+      setTimeout(quoter(i), 10000);
+    }
+  }
 }
 
     
@@ -168,14 +168,15 @@ $scope.quoteFade = function(){
     // })
   }
 
-  $scope.submitSignup = function(signup){
-
+  $scope.submitSignup = (signup) =>{
+    console.log(signup);
     mainServ.postNewUser(signup)
-
-    console.log(("button works"))
-    $("body").addClass("animated hinge");
         
 
+  }
+
+  $scope.changeView = () => {
+      $scope.page2 = true
   }
 
 })

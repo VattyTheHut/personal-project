@@ -9,7 +9,7 @@ angular.module('app')
   $scope.appendMsg = (msg) => {
     $scope.messages.push(msg)
     socket.emit('chat message', {msg});
-    $('#m').val('');
+    $scope.msg = ""
 
   }
 

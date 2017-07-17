@@ -47,11 +47,6 @@ app.config(function($stateProvider, $urlRouterProvider) {
             url: '/about',
             templateUrl: 'views/about.html'
         })
-
-        .state('signup2', {
-            url: '/signup2',
-            templateUrl: 'views/signUp2.html'
-        })
         
 }).directive('mainNav', function() {
   return {

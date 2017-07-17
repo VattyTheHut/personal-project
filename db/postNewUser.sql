@@ -1,1 +1,1 @@
-INSERT INTO user_table (email, password) VALUES ($1, $2)
+INSERT INTO user_table (email, password, fname, lname, work, location) VALUES ($1, $2, $3, $4, $5, $6)

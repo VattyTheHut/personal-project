@@ -5,7 +5,7 @@
     
     <div id="animate-next">
         <div class="login-page">
-        <div class="login-form">
+        <div ng-show="!page2" class="login-form">
              <h4>Sign up to see more</h4>
             <form class="login-register-form">
             <button>create</button>
@@ -19,9 +19,24 @@
             <form class="login-login-form">
             <input ng-model="signup.email" type="text" placeholder="email"/>
             <input ng-model="signup.password" type="password" placeholder="password"/>
-            <div ng-click="submitSignup(signup)" id="haha"><a ui-sref='signup2'>NEXT</a></div>
+            <div id="haha"><a ng-click='changeView()'>NEXT</a></div>
             </form>
         </div>
+
+        <div ng-show="page2" class="login-form">
+        <form class="login-register-form">
+        <button>create</button>
+        </form>
+
+        <form class="login-login-form">
+            <input ng-model="signup.fname" type="text" placeholder="First Name"/>
+            <input ng-model="signup.lname" type="text" placeholder="Last Name"/>
+            <input ng-model="signup.work" type="text" placeholder="Work"/>
+            <input ng-model="signup.Location" type="text" placeholder="Location"/>
+            <button ng-click="submitSignup(signup)">create</button>
+        </form>
+    </div>
+
         </div>
     </div>
 </div>

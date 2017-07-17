@@ -10,6 +10,7 @@ angular.module('app')
     }
 
     this.postNewUser = function(signup){
+        console.log('got all my data')
         return $http.post('/postNewUser', signup)
     }
 })

@@ -9,11 +9,11 @@
         </form>
 
         <form class="login-login-form">
-            <input type="text" placeholder="First Name"/>
-            <input type="text" placeholder="Last Name"/>
-            <input type="password" placeholder="Work"/>
-            <input type="text" placeholder="Location"/>
-            <button>create</button>
+            <input ng-model="signup.fname" type="text" placeholder="First Name"/>
+            <input ng-model="signup.lname" type="text" placeholder="Last Name"/>
+            <input ng-model="signup.work" type="text" placeholder="Work"/>
+            <input ng-model="signup.Location" type="text" placeholder="Location"/>
+            <button ng-click="submitSignup(signup)">create</button>
         </form>
     </div>
     </div>
