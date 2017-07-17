@@ -51,11 +51,11 @@ app.post('/postNewUser', function(req, res, next){
 
 });
 
-var messages = []
+ var messages = []
 
 io.on('connection', (socket) =>{
 
-  io.to(socket.id).emit('message history', messages)
+  //io.to(socket.id).emit('message history', messages)
   socket.on('chat message', (msg) =>{
       console.log(msg)
       messages.push(msg)

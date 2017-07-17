@@ -105,8 +105,8 @@ li a:hover:not(.active) {
 
 
 .small-img{
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
 }
 
 .intro-img{
@@ -179,4 +179,75 @@ li a:hover:not(.active) {
   border-width: thin;
   border-color: gray;
 }
+/*------------*/
 
+
+
+
+.intro-img{
+  width: 165px;
+  height: 165px;
+  margin-left: 25%;
+}
+
+
+#intro-text{
+  border-style: solid;
+  border-width: thin;
+  border-color: gray;
+}
+
+.big-margin-pinch{
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.margin-pinch{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.text-padding{
+  padding: 15%;
+}
+
+.mid-text{
+  font-size: 22px;
+  color: goldenrod;
+}
+
+.vid{
+  background-color: bisque;
+  height: 50vh;
+}
+
+.splashImga{
+  height: 60vh;
+  background-image: url("/images/mvp/Nicholas_Kratzer.jpg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: fixed;
+  background-size: cover;
+
+}
+
+.splashImgb{
+  height: 60vh;
+  background-image: url("/images/mvp/Leo_Tolstoy.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+/*--*/
+#eye-candy{
+  font-size: 25px; 
+  color: #c0b283;
+}
+
+/*--------------------------*/
+
+#trailer-vid{
+  height: 70vh;
+  background-color: #373737;
+}

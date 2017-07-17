@@ -1,7 +1,7 @@
-<div ng-controller="signUpCtrl">
+<div ng-controller="mainCtrl">
     <main-nav></main-nav>
 
-<div class="Body">
+<div class="Body" id="switcher">
     
     <div id="animate-next">
         <div class="login-page">
@@ -19,7 +19,7 @@
             <form class="login-login-form">
             <input ng-model="signup.email" type="text" placeholder="email"/>
             <input ng-model="signup.password" type="password" placeholder="password"/>
-            <button ng-click="submitSignup(signup)" id="haha">Sign up</button>
+            <div ng-click="submitSignup(signup)" id="haha"><a ui-sref='signup2'>NEXT</a></div>
             </form>
         </div>
         </div>

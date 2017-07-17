@@ -2,12 +2,26 @@
 angular.module('app')
 
 .controller('chatCtrl', ($scope, chatServ) => {
-  console.log('the chatCtrl is working')
 
-  $scope.appendMsg = () => {
-    console.log('the model works fine')
+  $scope.messages = []
+  var socket = io();
+
+  $scope.appendMsg = (msg) => {
+    $scope.messages.push(msg)
+    socket.emit('chat message', {msg});
+    $('#m').val('');
 
   }
+
+
+  socket.on('chat message', function(msg){
+     $scope.messages.push(msg) 
+    });
+
+  $scope.test = "yeh next now, where now huh?";
+
+
+  
 
   
   

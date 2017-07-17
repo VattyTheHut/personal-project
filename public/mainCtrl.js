@@ -1,7 +1,7 @@
 
 angular.module('app')
 
-.controller('mainCtrl', function($scope, mainServ, ) {
+.controller('mainCtrl', function($scope, mainServ) {
 
 const quotes = [
     {
@@ -144,34 +144,23 @@ const quotes = [
 
 
 $scope.quoteFade = function(){
-  // console.log('quoter now')
+  console.log('quoter now')
 
-  // function quoter(index){
-  //   console.log(quotes[index].quote)
-  // }
+//   function quoter(index){
+//     console.log(quotes[index].quote)
+//   }
 
-  // while(true){
+//   while(true){
   
-  //   for(var i = 0; i < quotes.length; i++){
-  //     setTimeout(quoter(i), 100000);
-  //   }
-
-  // }
+//     for(var i = 0; i < quotes.length; i++){
+//       setTimeout(quoter(i), 10000);
+//     }
+//   }
 }
 
-  $scope.messages = []
     
   
-
-  // function getMessages() {
-  //   mainServ.getMessages()
-  //     .then(function(whatevercomesback) {
-  //       console.log(whatevercomesback)
-  //       $scope.messages = whatevercomesback.data.messages
-  //     })
-
-  // }
-  $scope.submitMessage = function(message) {
+  $scope.submitMessage = (message) => {
     // var obj = {message: message}
     mainServ.postMessage(message)
     // .then(function(response) {
@@ -179,20 +168,18 @@ $scope.quoteFade = function(){
     // })
   }
 
-
   $scope.submitSignup = function(signup){
 
     mainServ.postNewUser(signup)
 
+    console.log(("button works"))
+    $("body").addClass("animated hinge");
+        
+
   }
 
-
 })
-.directive('mainNav', () => {
-  return {
-    templateUrl: 'directive/mainNav.html'
-  };
-});
+
 
 
 

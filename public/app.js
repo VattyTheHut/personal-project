@@ -47,6 +47,21 @@ app.config(function($stateProvider, $urlRouterProvider) {
             url: '/about',
             templateUrl: 'views/about.html'
         })
+
+        .state('signup2', {
+            url: '/signup2',
+            templateUrl: 'views/signUp2.html'
+        })
         
+}).directive('mainNav', function() {
+  return {
+    templateUrl: 'directive/mainNav.html'
+  };
+}).directive('endFooter', function() {
+    console.log("endfooter")
+  return {
+    templateUrl: './directive/end-footer.html'
+  };
+  
 });
 

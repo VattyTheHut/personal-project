@@ -10,8 +10,6 @@ angular.module('app')
     }
 
     this.postNewUser = function(signup){
-
         return $http.post('/postNewUser', signup)
-        
     }
 })

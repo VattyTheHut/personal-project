@@ -89,13 +89,41 @@
   color: #EF3B3A;
 }
 
-/*.Body {
-  background: #76b852; 
+
+.sample-show-hide {
+  transition: all linear 0.5s;
+}
+.sample-show-hide.ng-hide {
+  opacity: 0;
+}
+
+.Body {
+  /*background: #76b852; 
   background: -webkit-linear-gradient(right, #76b852, #8DC26F);
   background: -moz-linear-gradient(right, #76b852, #8DC26F);
   background: -o-linear-gradient(right, #76b852, #8DC26F);
-  background: linear-gradient(to left, #76b852, #8DC26F);
+  background: linear-gradient(to left, #76b852, #8DC26F);*/
+  background-image: url('https://handheldcamera12.files.wordpress.com/2013/02/school-of-athens-detail-from-right-hand-side-showing-diogenes-on-the-steps-and-euclid-1511.jpg');
+  height: 50vh;
+  background-repeat: no-repeat;
+
+
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;      
-}*/
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+
+.BBBody{
+  background-image: url('http://www.oceansbridge.com/paintings/artists/jan2012/Jean-Baptiste-Simeon-Chardin2/Jean-Baptiste-Simeon-Chardin-xx-The-Attributes-of-Science-xx-Musee-Jacquemart-Andre.jpg');
+  height: 50vh;
+  width: 60%
+  background-repeat: no-repeat;
+  margin: 0px;
+
+
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
