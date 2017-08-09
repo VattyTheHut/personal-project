@@ -14,7 +14,7 @@ app.use(express.static('assets'))
 app.use(cors())
 app.use(bodyParser.json())
 
-massive('postgres://vatekehcorlon:Zelda64..@localhost/ppolychat').then(massiveInstance => {
+massive(process.env.DATABASE_URL).then(massiveInstance => {
    app.set('db', massiveInstance);
  })
 
